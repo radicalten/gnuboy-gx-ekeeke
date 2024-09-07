@@ -96,7 +96,7 @@ void memfile_autosave()
  *****************************************************************************/
 static int FAT_ManageFile(char *filename, int direction, int filetype)
 {
-  char pathname[MAXPATHLEN];
+  char pathname[MAXNAMELEN];
   int done = 0;
   int filesize;
 
