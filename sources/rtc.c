@@ -131,7 +131,7 @@ void rtc_save_internal(u8 *buffer)
 	int rt = 0;
 	struct timespec tp;
 
-	clock_gettime(&tp);
+	clock_gettime(1, &tp);
 	rt = tp.tv_sec;
 
 	memcpy(buffer, &(rtc.carry), 4);
