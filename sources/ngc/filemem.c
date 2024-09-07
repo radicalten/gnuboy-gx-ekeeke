@@ -268,7 +268,7 @@ int ManageSRAM (u8 direction, u8 device)
   outbytes = 2048 + 64 + sram_size;
 
   /*** Initialise the CARD system ***/
-  memset (&SysArea, 0, CARD_WORKAREA);
+  memset (&SysArea, 0, CARD_WORKAREA_SIZE);
   CARD_Init ("GNUB", "00");
 
   /*** Attempt to mount the card ***/
@@ -451,7 +451,7 @@ int ManageState (u8 direction, u8 device)
   outbytes = 2048 + 64 + state_size;
 
   /*** Initialise the CARD system ***/
-  memset (&SysArea, 0, CARD_WORKAREA);
+  memset (&SysArea, 0, CARD_WORKAREA_SIZE);
   CARD_Init ("GNUB", "00");
 
   /*** Attempt to mount the card ***/
