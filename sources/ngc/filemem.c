@@ -39,7 +39,7 @@ extern int gbromsize;
 /**
  * libOGC System Work Area
  */
-static u8 SysArea[CARD_WORKAREA] ATTRIBUTE_ALIGN (32);
+static u8 SysArea[CARD_WORKAREA_SIZE] ATTRIBUTE_ALIGN (32);
 static card_dir CardDir;
 static card_file CardFile;
 static card_stat CardStatus;
