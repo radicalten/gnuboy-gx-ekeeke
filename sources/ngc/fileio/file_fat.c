@@ -32,7 +32,7 @@
 #include "wkf.h"
 
 /* current FAT directory */
-static char fatdir[MAXPATHLEN];
+static char fatdir[MAXNAMLEN];
 
 /* current FAT device */
 static int fat_type   = 0;
@@ -111,8 +111,8 @@ int FAT_UpdateDir(int go_up)
 int FAT_ParseDirectory()
 {
   int nbfiles = 0;
-  char filename[MAXPATHLEN];
-  char filename1[MAXPATHLEN];
+  char filename[MAXNAMLEN];
+  char filename1[MAXNAMLEN];
 
   /* open directory */
   DIR* dir = opendir (fatdir);
@@ -184,7 +184,7 @@ int FAT_LoadFile (u8 *buffer)
     if(!useHistory) history_add_file(fatdir, filelist[selection].filename);
 
     /* full filename */
-    char fname[MAXPATHLEN];
+    char fname[MAXNAMLEN];
     sprintf(fname, "%s%s",fatdir,filelist[selection].filename);
 
     /* open file */
