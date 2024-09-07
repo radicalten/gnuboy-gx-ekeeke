@@ -124,7 +124,7 @@ void rtc_load_internal(FILE *f)
 	if (syncrtc) while (rt-- > 0) rtc_tick();
 }
 #else
-extern int clock_gettime(struct timespec *tp);
+extern int clock_gettime (clockid_t clock_id, struct timespec *tp);
 
 void rtc_save_internal(u8 *buffer)
 {
