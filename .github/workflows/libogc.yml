@@ -12,7 +12,7 @@ jobs:
       uses: actions/checkout@v4
     - name: Compile
       run: |
-        make -f Makefile.wiiogc -j$(nproc)
+        make -f Makefile.wii
     - name: Upload
       uses: actions/upload-artifact@v4
       with:
