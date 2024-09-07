@@ -37,7 +37,6 @@
 #endif
 
 extern u8 *gbrom;
-extern u8 legal();
 /***************************************************************************
  * drawmenu
  *
@@ -512,7 +511,6 @@ int Emu_options ()
            RomInfo();
            break;
         case 4:   // view credits
-           legal();
            break;
     }
   }
