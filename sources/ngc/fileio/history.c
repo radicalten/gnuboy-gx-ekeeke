@@ -28,7 +28,7 @@ t_history history;
 
 void history_save()
 {
-  char pathname[MAXPATHLEN];
+  char pathname[MAXNAMLEN];
 
   if (!fat_enabled) return;
 
@@ -97,7 +97,7 @@ void history_add_file(char *filepath, char *filename)
 
 void history_load()
 {
-  char pathname[MAXPATHLEN];
+  char pathname[MAXNAMLEN];
 
   /* open file for reading */
   sprintf (pathname, "%s/history.ini", DEFAULT_PATH);
