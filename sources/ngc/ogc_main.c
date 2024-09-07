@@ -19,7 +19,6 @@ u8 *gbrom;
 int new_game;
 
 extern void MainMenu ();
-extern void legal();
 
 void reload_rom()
 {
