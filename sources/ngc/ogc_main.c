@@ -37,7 +37,6 @@ int main(int argc, char *argv[])
   vid_init();
   pcm_init();
   mem_init();
-  legal();
 
   gbrom = memalign(32,MAXROMSIZE);
   gbromsize = 0;
