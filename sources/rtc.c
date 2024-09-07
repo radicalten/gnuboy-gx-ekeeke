@@ -166,7 +166,7 @@ void rtc_load_internal(u8 *buffer)
 	rtc.stop &= 1;
 	rtc.carry &= 1;
 	
-	clock_gettime(&tp);
+	clock_gettime(1, &tp);
 	if (rt) rt = (tp.tv_sec - rt) * 60;
 	if (syncrtc) while (rt-- > 0) rtc_tick();
 }
