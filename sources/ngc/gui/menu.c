@@ -370,7 +370,6 @@ void RomInfo ()
   WriteCentre (ypos , "Press A to exit");
   
   SetScreen ();
-  WaitButtonA ();
 }
 
 /****************************************************************************
