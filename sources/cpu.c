@@ -8,7 +8,6 @@
 #include "fastmem.h"
 #include "cpuregs.h"
 #include "cpucore.h"
-#include "lcdc.h"
 #include "debug.h"
 
 
