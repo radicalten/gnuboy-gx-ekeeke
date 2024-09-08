@@ -27,7 +27,7 @@ INCLUDES	:=	sources sources/ngc sources/ngc/gui sources/ngc/fileio
 CFLAGS	= -O3 -Wall $(MACHDEP) -fno-strict-aliasing $(INCLUDE) -DWORDS_BIGENDIAN -DNGC="1" -DHW_RVL
 CXXFLAGS	=	$(CFLAGS)
 
-LDFLAGS	=	-g $(MACHDEP) -Wl,-Map,$(notdir $@).map
+LDFLAGS	=	 $(MACHDEP) -Wl,-Map,$(notdir $@).map
 
 #---------------------------------------------------------------------------------
 # any extra libraries we wish to link with the project
