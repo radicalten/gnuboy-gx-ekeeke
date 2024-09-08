@@ -1,4 +1,4 @@
-name: Libogc
+name: Libogc-fast
 on:
   push:
     branches:
@@ -12,7 +12,7 @@ jobs:
       uses: actions/checkout@v4
     - name: Compile
       run: |
-        make -f Makefile.wii
+        make -f Makefile.wiifast
     - name: Upload
       uses: actions/upload-artifact@v4
       with:
