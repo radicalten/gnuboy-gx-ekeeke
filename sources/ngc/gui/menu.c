@@ -369,7 +369,6 @@ void RomInfo ()
   ypos += 2*fheight;
   WriteCentre (ypos , "Press A to exit");
   
-  SetScreen ();
 }
 
 /****************************************************************************
