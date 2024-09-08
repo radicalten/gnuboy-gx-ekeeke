@@ -879,11 +879,12 @@ next:
 			break;
 		}
 		break;
-			
+#ifndef NGC			
 	default:
 		die(
 			"invalid opcode 0x%02X at address 0x%04X, rombank = %d\n",
 			op, (PC-1) & 0xffff, mbc.rombank);
+#endif
 		break;
 	}
 
