@@ -1,8 +1,8 @@
-name: Libogc-fast
+name: Libogc-fast-sdl2
 on:
   push:
     branches:
-    - master
+    - sdl2
 jobs:
   build-wii:
     runs-on: ubuntu-latest
