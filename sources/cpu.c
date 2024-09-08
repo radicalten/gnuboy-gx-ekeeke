@@ -388,8 +388,9 @@ next:
 		}
 	}
 	IME = IMA;
-	
+#ifndef NGC	
 	if (debug_trace) debug_disassemble(PC, 1);
+#endif	
 	op = FETCH;
 	clen = cycles_table[op];
 
