@@ -24,10 +24,10 @@ INCLUDES	:=	sources sources/ngc sources/ngc/gui sources/ngc/fileio
 # options for code generation
 #---------------------------------------------------------------------------------
 
-CFLAGS	= -O3 -Wall $(MACHDEP) -fno-strict-aliasing $(INCLUDE) -DWORDS_BIGENDIAN -DNGC="1" -DHW_RVL
+CFLAGS	= -O3 -flto -fuse-linker-plugin -Wall $(MACHDEP) -fno-strict-aliasing $(INCLUDE) -DWORDS_BIGENDIAN -DNGC="1" -DHW_RVL
 CXXFLAGS	=	$(CFLAGS)
 
-LDFLAGS	=    -fwhole-program $(MACHDEP) -Wl,-Map,$(notdir $@).map
+LDFLAGS	=  -O3 -flto -fuse-linker-plugin $(MACHDEP) -Wl,-Map,$(notdir $@).map
 
 #---------------------------------------------------------------------------------
 # any extra libraries we wish to link with the project
